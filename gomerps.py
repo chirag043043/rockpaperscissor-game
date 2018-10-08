@@ -1,9 +1,10 @@
 import random
-c=['stone','paper','scissor']
-computer=c[random.randint(0,2)]
+
+options = ['Rock','Paper','Scissor']
+computer =options[random.randint(0,2)]
 player = 'false';
 while player !='exit':
-    player = input("Rock, Paper, Scissors?")
+    player = input("Rock, Paper, Scissor?")
     if player == computer:
         print("Tie!")
     elif player == "Rock":
@@ -12,11 +13,11 @@ while player !='exit':
         else:
             print("You win!", player, "smashes", computer)
     elif player == "Paper":
-        if computer == "Scissors":
+        if computer == "Scissor":
             print("You lose!", computer, "cut", player)
         else:
             print("You win!", player, "covers", computer)
-    elif player == "Scissors":
+    elif player == "Scissor":
         if computer == "Rock":
             print("You lose...", computer, "smashes", player)
         else:
@@ -25,6 +26,7 @@ while player !='exit':
         print("That's not a valid play. Check your spelling!")
         print("Rock not rock or ROCK")
     player = 'False'
-    computer = c[random.randint(0,2)]
+    computer = options[random.randint(0,2)]
     print("type exit to leave")
+    player = input()
 
